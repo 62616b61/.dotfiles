@@ -1,0 +1,64 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.hide-scrollbar: true
+rofi.separator-style: none
+rofi.padding: 600
+rofi.lines: 3
+rofi.bw: 0
+rofi.width: 100
+rofi.color-enabled: true
+rofi.color-window: argb: DD273238, argb: DD273238, argb: DD1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+! ------------------------------------------------------------------------------
+! URXVT Terminal
+! ------------------------------------------------------------------------------
+URxvt.font: xft:xos4 Terminus:size=8
+
+URxvt.urgentOnBell: true
+URxvt.scrollBar: false
+
+! Set terminal padding
+URxvt.internalBorder: 20
+
+! colorscheme
+! special
+*.foreground:   #ffffff
+*.background:   #232e2f
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #232e2f
+*.color8:       #808077
+
+! red
+*.color1:       #d99c9d
+*.color9:       #c8c8bd
+
+! green
+*.color2:       #54bb6f
+*.color10:      #c8c8bb
+
+! yellow
+*.color3:       #f2d091
+*.color11:      #b0b0c8
+
+! blue
+*.color4:       #8b9f9e
+*.color12:      #c8c8c8
+
+! magenta
+*.color5:       #ce8282
+*.color13:      #c5c8bf
+
+! cyan
+*.color6:       #76b88c
+*.color14:      #c2c8c1
+
+! white
+*.color7:       #b8b8b8
+*.color15:      #eeeeee
+
