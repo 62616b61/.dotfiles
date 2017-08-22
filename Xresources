@@ -16,38 +16,49 @@ rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 ! ------------------------------------------------------------------------------
 ! URXVT Terminal
 ! ------------------------------------------------------------------------------
+URxvt.font: xft:xos4 Terminus:size=8
+
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
 
 ! Set terminal padding
-URxvt.internalBorder: 15
+URxvt.internalBorder: 20
 
-! Tango theme
-
-URxvt.background: #1C1C1C
-URxvt.foreground: #DEDEDE
+! colorscheme
+! special
+*.foreground:   #ffffff
+*.background:   #232e2f
+*.cursorColor:  #ffffff
 
 ! black
-URxvt.color0  : #2E3436
-URxvt.color8  : #555753
+*.color0:       #232e2f
+*.color8:       #808077
+
 ! red
-URxvt.color1  : #CC0000
-URxvt.color9  : #EF2929
+*.color1:       #d99c9d
+*.color9:       #c8c8bd
+
 ! green
-URxvt.color2  : #4E9A06
-URxvt.color10 : #8AE234
+*.color2:       #54bb6f
+*.color10:      #c8c8bb
+
 ! yellow
-URxvt.color3  : #C4A000
-URxvt.color11 : #FCE94F
+*.color3:       #f2d091
+*.color11:      #b0b0c8
+
 ! blue
-URxvt.color4  : #3465A4
-URxvt.color12 : #729FCF
+*.color4:       #8b9f9e
+*.color12:      #c8c8c8
+
 ! magenta
-URxvt.color5  : #75507B
-URxvt.color13 : #AD7FA8
+*.color5:       #ce8282
+*.color13:      #c5c8bf
+
 ! cyan
-URxvt.color6  : #06989A
-URxvt.color14 : #34E2E2
+*.color6:       #76b88c
+*.color14:      #c2c8c1
+
 ! white
-URxvt.color7  : #D3D7CF
-URxvt.color15 : #EEEEEC
+*.color7:       #b8b8b8
+*.color15:      #eeeeee
+
