@@ -1,0 +1,95 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 288,
+       "width": 480,
+       "x": 0,
+       "y": 0
+    },
+    "name": "cava",
+    "percent": 1,
+    "swallows": [
+       {
+        "class": "^URxvt$",
+        "instance": "^Cava$",
+        "title": "^cava$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 306,
+       "width": 301,
+       "x": 1022,
+       "y": 217
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "user_on",
+            "geometry": {
+               "height": 300,
+               "width": 520,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cry@crispywaffle:~",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^URxvt$",
+                "instance": "^Bonsai$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 334,
+       "width": 526,
+       "x": 509,
+       "y": 385
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "user_on",
+            "geometry": {
+               "height": 328,
+               "width": 520,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cry@crispywaffle:~",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^URxvt$",
+        	"instance": "^Jam$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+
