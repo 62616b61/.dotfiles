@@ -16,13 +16,18 @@ rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 ! ------------------------------------------------------------------------------
 ! URXVT Terminal
 ! ------------------------------------------------------------------------------
-URxvt.font: xft:xos4 Terminus:size=8
-
+! Common
+URxvt.font: xft:artwiz lemon
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
+URxvt.internalBorder: 50
 
-! Set terminal padding
-URxvt.internalBorder: 20
+! Cava
+Cava.internalBorder: 0
+Cava.externalBorder: 0
+Cava.transparent: true
+Cava.shading: 100
+
 
 ! colorscheme
 ! special

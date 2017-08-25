@@ -17,17 +17,14 @@ secondary = ${xrdb:color2}
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 25
-;offset-x = 1%
-;offset-y = 1%
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
 padding-left = 0
@@ -35,17 +32,17 @@ padding-right = 4
 
 module-margin-left = 2
 module-margin-right = 2
-font-0 = xos4 Terminus:pixelsize=10;1
-font-1 = FontAwesome:pixelsize=10;2
+font-0 = artwiz lemon:pixelsize=10;1
+font-1 = xos4 Terminus:pixelsize=10;1
+font-2 = koruri:pixelsize=12;2
+font-3 = FontAwesome:pixelsize=10;2
 
-modules-left = i3
-modules-center = xwindow
-modules-right = volume xkeyboard wlan battery date
+modules-left = i3 
+modules-center = xkeyboard xwindow 
+modules-right = volume bitcoin wlan battery date
 
 tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+tray-padding = 1
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -60,7 +57,8 @@ tray-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title%
+label-maxlen = 80
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -123,7 +121,7 @@ type = custom/script
 exec = ~/Scripts/bitcoin.sh
 
 format = <label>
-format-prefix = " "
+format-prefix = "1BTC = "
 
 interval = 60
 
@@ -159,39 +157,16 @@ label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
-bar-volume-width = 20
-bar-volume-foreground-0 = #C93EC9
+bar-volume-width = 25
+bar-volume-foreground-0 = ${colors.primary}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 0
-bar-volume-fill = –
+bar-volume-fill = -
 bar-volume-fill-font = 0
-bar-volume-empty = –
+bar-volume-empty = -
 bar-volume-empty-font = 0
 bar-volume-empty-foreground = ${colors.foreground-alt}
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC0
-full-at = 98
-
-format-charging = <animation-charging> <label-charging>
-
-format-discharging = <ramp-capacity> <label-discharging>
-
-format-full-prefix = " "
-
-ramp-capacity-0 = " "
-ramp-capacity-1 = " "
-ramp-capacity-2 = " "
-
-animation-charging-0 = " "
-animation-charging-1 = " "
-animation-charging-2 = " "
-animation-charging-3 = " "
-animation-charging-4 = " "
-animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
