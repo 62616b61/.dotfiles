@@ -153,8 +153,7 @@ smart_gaps on
 smart_borders on
 
 # autostart
-exec ~/.config/i3/workspaces/restore9.sh
-exec ~/.config/i3/workspaces/restore4.sh
+exec ~/.config/i3/workspaces/restore.sh
 
 exec_always xrdb ~/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
