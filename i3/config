@@ -137,19 +137,16 @@ client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-# Title bars with padding.
-# We first set the titlebar font size to a larger font size than desired
-# to get a good padding amount. We then use pango markup to force i3 to
-# print the desired font size. This gives us large titlebars with a small
-# font.
-font pango:Ubuntu 14
-for_window [class=".*"] title_format "<span font='Ubuntu 9'>  > %title</span>"
+font pango:dejavu 10
 for_window [class=".*"] border pixel 3
 
 gaps inner 15
-gaps outer 15
+gaps outer 10
 smart_gaps on
 smart_borders on
+
+# autostart
+exec ~/.config/i3/workspaces/restore.sh
 
 exec_always xrdb ~/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

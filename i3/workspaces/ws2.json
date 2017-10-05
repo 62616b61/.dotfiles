@@ -1,0 +1,99 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "stacked",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 348,
+               "width": 540,
+               "x": 0,
+               "y": 0
+            },
+            "name": "vim",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^URxvt$",
+                "instance": "^urxvt$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 348,
+                       "width": 540,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "cry@crispywaffle: ~",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "^urxvt$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 348,
+                       "width": 540,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "cry@crispywaffle: ~",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "^urxvt$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 348,
+                       "width": 540,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "cry@crispywaffle: ~",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "^urxvt$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
