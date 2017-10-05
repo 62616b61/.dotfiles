@@ -16,7 +16,7 @@ rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 ! ------------------------------------------------------------------------------
 ! URXVT Terminal
 ! ------------------------------------------------------------------------------
-URxvt.font: xft:xos4 Terminus:size=8
+URxvt.font: xft:xos4 Terminus:size=10
 
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
