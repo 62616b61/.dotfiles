@@ -1,28 +1,14 @@
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.hide-scrollbar: true
-rofi.separator-style: none
-rofi.padding: 600
-rofi.lines: 3
-rofi.bw: 0
-rofi.width: 100
-rofi.color-enabled: true
-rofi.color-window: argb: DD273238, argb: DD273238, argb: DD1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
-
-! ------------------------------------------------------------------------------
-! URXVT Terminal
-! ------------------------------------------------------------------------------
-URxvt.font: xft:xos4 Terminus:size=10
+URxvt.font: xft:xos4 Terminus:pixelsize=12
 
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
+URxvt.internalBorder: 35
 
-! Set terminal padding
-URxvt.internalBorder: 20
+URxvt*lineSpace:   1
+URxvt.letterSpace: 0
+URxvt.iso14755:    false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: font-size
 
 ! colorscheme
 ! special
@@ -62,3 +48,14 @@ URxvt.internalBorder: 20
 *.color7:       #b8b8b8
 *.color15:      #eeeeee
 
+rofi.hide-scrollbar: true
+rofi.separator-style: none
+rofi.padding: 700
+rofi.lines: 3
+rofi.bw: 0
+rofi.width: 100
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
