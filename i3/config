@@ -24,6 +24,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move focused workspace to monitor
+bindsym $mod+Shift+bracketleft move workspace to output left
+bindsym $mod+Shift+bracketright move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -140,8 +144,8 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 font pango:dejavu 10
 for_window [class=".*"] border pixel 3
 
-gaps inner 15
-gaps outer 10
+gaps inner 0
+gaps outer 0
 smart_gaps on
 smart_borders on
 
@@ -150,4 +154,5 @@ exec ~/.config/i3/workspaces/restore.sh
 
 exec_always xrdb ~/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always feh --bg-scale ~/Pictures/Wallpapers/mawa-setiawan-edith-sofa.jpg
 exec_always compton
