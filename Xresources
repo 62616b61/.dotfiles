@@ -1,6 +1,4 @@
-! ------------------------------------------------------------------------------
 ! ROFI Color theme
-! ------------------------------------------------------------------------------
 rofi.hide-scrollbar: true
 rofi.separator-style: none
 rofi.padding: 600
@@ -8,21 +6,31 @@ rofi.lines: 3
 rofi.bw: 0
 rofi.width: 100
 rofi.color-enabled: true
-rofi.color-window: argb: DD273238, argb: DD273238, argb: DD1e2529
+rofi.color-window: #273238, #273238, #1e2529
 rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
 rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
 rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 
-! ------------------------------------------------------------------------------
-! URXVT Terminal
-! ------------------------------------------------------------------------------
+! Some font rendering fixings
+Xft.dpi:        96
+Xft.rgba:       rgb
+Xft.autohint:   0
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
+
+! URXVT
+urxvt.letterSpace: 0
+urxvt.lineSpace: 1
 URxvt.font: xft:xos4 Terminus:size=8
+
 
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
 
-! Set terminal padding
 URxvt.internalBorder: 20
+URxvt.geometry: 100x25
 
 ! colorscheme
 ! special
