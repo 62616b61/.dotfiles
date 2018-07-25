@@ -44,8 +44,8 @@
 URxvt.cursorBlink : 0
 URxvt.font: xft:xos4 Terminus:size=8
 
-urxvt.lineSpace           : 1
-urxvt.letterSpace         : 0
+URxvt.lineSpace           : 1
+URxvt.letterSpace         : 0
 URxvt.scrollBar           : false
 URxvt.internalBorder      : 32
 URxvt.cursorUnderline     : false
