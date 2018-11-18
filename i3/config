@@ -15,7 +15,7 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 for_window [class=".*"] border pixel 3
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal -e tmux
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec rofi -show run -font "Roboto 20"
