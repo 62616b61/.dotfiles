@@ -10,13 +10,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nerdypepper/agila.vim'
-"Plug 'nerdypepper/vim-colors-plain'
+Plug 'nerdypepper/vim-colors-plain'
+Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'elzr/vim-json'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'Yggdroot/indentLine'
 
+Plug 'hashivim/vim-terraform'
 Plug 'ballerina-attic/plugin-vim'
 
 call plug#end()
@@ -89,7 +91,6 @@ set foldmethod=manual
 set complete=.,w,b,i,u,t,
 set background=dark
 set mouse=r
-set clipboard+=unnamedplus
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
