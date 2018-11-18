@@ -19,7 +19,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git docker docker-compose vi-mode zsh-autosuggestions)
+plugins=(git docker docker-compose zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
