@@ -43,8 +43,8 @@ set tabstop=2
 set expandtab
 
 " autoindent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+"nnoremap p p=`]<C-o>
+"nnoremap P P=`]<C-o>
 
 "
 " plugins
@@ -65,6 +65,7 @@ call plug#begin('~/.vim/plugged')
  " Javascript
  Plug 'pangloss/vim-javascript'
  Plug 'mxw/vim-jsx'
+ "Plug 'flowtype/vim-flow'
  Plug 'othree/yajs.vim'
  Plug 'othree/javascript-libraries-syntax.vim'
 
@@ -75,4 +76,12 @@ syntax enable
 
 source ~/.dotfiles/vim/splits.vim
 
-nnoremap <Leader>a :Ack!<Space>
+"let g:flow#enable = 1
+""Use locally installed flow
+"let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+"if matchstr(local_flow, "^\/\\w") == ''
+    "let local_flow= getcwd() . "/" . local_flow
+"endif
+"if executable(local_flow)
+  "let g:flow#flowpath = local_flow
+"endif
