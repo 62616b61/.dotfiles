@@ -1,52 +1,70 @@
-URxvt.font: xft:xos4 Terminus:pixelsize=12
+#define base00 #263238
+#define base01 #2e3c43
+#define base02 #314549
+#define base03 #546e7a
+#define base04 #b2ccd6
+#define base05 #eeffff
+#define base06 #eeffff
+#define base07 #ffffff
+#define base08 #f07178
+#define base09 #f78c6c
+#define base0A #ffcb6b
+#define base0B #c3e88d
+#define base0C #89ddff
+#define base0D #82aaff
+#define base0E #c792ea
+#define base0F #ff5370
 
-URxvt.urgentOnBell: true
-URxvt.scrollBar: false
-URxvt.internalBorder: 35
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
 
-URxvt*lineSpace:   1
-URxvt.letterSpace: 0
-URxvt.iso14755:    false
-URxvt.iso14755_52: false
-URxvt.perl-ext-common: font-size
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
 
-! colorscheme
-! special
-*.foreground:   #ffffff
-*.background:   #232e2f
-*.cursorColor:  #ffffff
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07
 
-! black
-*.color0:       #232e2f
-*.color8:       #808077
+! ------------------------------------------------------------------------------
+!  URxvt
+! ------------------------------------------------------------------------------
 
-! red
-*.color1:       #d99c9d
-*.color9:       #c8c8bd
+URxvt.cursorBlink : 0
+URxvt.font: xft:xos4 Terminus:size=8
 
-! green
-*.color2:       #54bb6f
-*.color10:      #c8c8bb
+URxvt.saveLines           : 10240
+URxvt.lineSpace           : 1
+URxvt.letterSpace         : 0
+URxvt.scrollBar           : false
+URxvt.internalBorder      : 32
+URxvt.cursorUnderline     : false
+URxvt.geometry            : 100x25
+URxvt.urgentOnBell        : true
+URxvt.thickness           : 5
+URxvt.intensityStyles     : false
 
-! yellow
-*.color3:       #f2d091
-*.color11:      #b0b0c8
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
 
-! blue
-*.color4:       #8b9f9e
-*.color12:      #c8c8c8
+rofi.color-enabled: true
 
-! magenta
-*.color5:       #ce8282
-*.color13:      #c5c8bf
-
-! cyan
-*.color6:       #76b88c
-*.color14:      #c2c8c1
-
-! white
-*.color7:       #b8b8b8
-*.color15:      #eeeeee
+rofi.color-window:    base00 , base00 , base00 , base00 , base03
+rofi.color-normal:    base00 , base03 , base00 , base00 , base07
+rofi.color-active:    base03 , base0E , base00 , base0B , base00
+rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.hide-scrollbar: true
 rofi.separator-style: none
@@ -54,8 +72,13 @@ rofi.padding: 700
 rofi.lines: 3
 rofi.bw: 0
 rofi.width: 100
-rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+
+! Some font rendering fixings
+Xft.dpi:        96
+Xft.rgba:       rgb
+Xft.autohint:   0
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
