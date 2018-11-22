@@ -79,7 +79,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 0
 
 # lock
-bindsym $mod+l exec sh ~/Scripts/lock.sh
+bindsym $mod+l exec betterlockscreen -l
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -115,7 +115,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Keyboard layouts
-exec setxkbmap -layout 'us,ru' && setxkbmap -option 'grp:alt_shift_toggle'
+exec setxkbmap -layout 'us,ru' && setxkbmap -option 'grp:rctrl_toggle'
 
 #audio controls
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
@@ -143,10 +143,12 @@ for_window [class=".*"] border pixel 2
 gaps inner 0
 gaps outer 0
 
+smart_borders on
+
 # autostart
 exec ~/.config/i3/workspaces/restore.sh
 
 exec_always xrdb ~/.Xresources
-exec_always feh --bg-fill ~/Pictures/Wallpapers/mawa-setiawan-edith-sofa.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/ofufakku.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec compton
