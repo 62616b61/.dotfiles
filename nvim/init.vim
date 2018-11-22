@@ -4,6 +4,7 @@ let &t_ZM = "\e[3m"
 " vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'simeji/winresizer'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdtree'
@@ -21,8 +22,8 @@ Plug 'metakirby5/codi.vim'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'posva/vim-vue'
-Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -118,7 +119,7 @@ let g:currentmode={
     \ 'no' : 'N·OPERATOR PENDING ',
     \ 'v'  : 'VISUAL ',
     \ 'V'  : 'V·LINE ',
-    \ '' : 'V·BLOCK ',
+    \ '' : 'V·BLOCK ',
     \ 's'  : 'SELECT ',
     \ 'S'  : 'S·LINE ',
     \ '' : 'S·BLOCK ',
