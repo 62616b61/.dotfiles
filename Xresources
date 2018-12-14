@@ -48,7 +48,7 @@ URxvt.saveLines           : 10240
 URxvt.lineSpace           : 1
 URxvt.letterSpace         : 0
 URxvt.scrollBar           : false
-URxvt.internalBorder      : 32
+URxvt.internalBorder      : 26
 URxvt.cursorUnderline     : false
 URxvt.geometry            : 100x25
 URxvt.urgentOnBell        : true
