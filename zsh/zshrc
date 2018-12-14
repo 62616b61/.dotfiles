@@ -1,4 +1,5 @@
-echo "\e[3m$(fortune -sa)\n"
+#echo "\e[3m$(fortune -sa)\n"
+sh ~/Scripts/food --pizza
 
 export ZSH=/usr/share/oh-my-zsh/
 export EDITOR=/usr/bin/nvim
