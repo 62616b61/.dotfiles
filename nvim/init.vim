@@ -21,6 +21,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'metakirby5/codi.vim'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
+Plug 'uarun/vim-protobuf'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
 Plug 'hashivim/vim-terraform'
