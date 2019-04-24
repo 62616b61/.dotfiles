@@ -4,7 +4,9 @@ let &t_ZM = "\e[3m"
 " vim-plugs
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'mhinz/vim-startify'
 Plug 'simeji/winresizer'
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdtree'
@@ -13,12 +15,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'nerdypepper/agila.vim'
 Plug 'nerdypepper/vim-colors-plain'
 Plug 'airblade/vim-gitgutter'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'elzr/vim-json'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'metakirby5/codi.vim'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'uarun/vim-protobuf'
@@ -229,9 +229,6 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " comfortable motion
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
 
 " indentLine
 let g:indentLine_setColors = 0
