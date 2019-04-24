@@ -43,6 +43,7 @@
 
 URxvt.cursorBlink : 0
 URxvt.font: xft:xos4 Terminus:size=8
+URxvt.perl-ext-common: font-size
 
 URxvt.saveLines           : 10240
 URxvt.lineSpace           : 1
