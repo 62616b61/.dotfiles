@@ -142,7 +142,7 @@ type = internal/date
 
 interval = 5
 
-date = "%b %d"
+date = "%A - %b %d"
 time = %H:%M
 
 label = %date% %time%
