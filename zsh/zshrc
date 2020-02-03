@@ -1,10 +1,11 @@
 #echo "\e[3m$(fortune -sa)\n"
 sh ~/Scripts/food --pizza
 
+export RANGER_LOAD_DEFAULT_RC=FALSE
 export ZSH=/usr/share/oh-my-zsh/
 export EDITOR=/usr/bin/nvim
-export TERM="xterm-256color"
 export JAVA_HOME=/usr/lib/jvm/default
+export ANDROID_HOME=~/Android/Sdk
 export npm_config_prefix=~/.npm-global
 export GOPATH="$HOME/go"
 export PATH="$HOME/.local/bin:$PATH"
@@ -22,13 +23,14 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git docker docker-compose zsh-autosuggestions)
+plugins=(git docker docker-compose)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
 alias vim='nvim'
 alias r='ranger'
-alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 
 unsetopt share_history
