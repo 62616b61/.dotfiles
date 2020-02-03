@@ -1,32 +1,17 @@
 mapclear
 let &t_ZM = "\e[3m"
 
-" vim-plugs
-call plug#begin('~/.local/share/nvim/plugged')
+" Key mappings
+source $HOME/.dotfiles/nvim/keys.vimrc
 
-Plug 'mhinz/vim-startify'
-Plug 'simeji/winresizer'
+" Install plugins
+source $HOME/.dotfiles/nvim/plugins.vimrc
 
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
-Plug 'nerdypepper/agila.vim'
-Plug 'nerdypepper/vim-colors-plain'
-Plug 'airblade/vim-gitgutter'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-Plug 'elzr/vim-json'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+" Language Server Protocol configs
+source $HOME/.dotfiles/nvim/lsp.vimrc
 
-Plug 'uarun/vim-protobuf'
-Plug 'posva/vim-vue'
-Plug 'leafgarland/typescript-vim'
-Plug 'hashivim/vim-terraform'
-
-call plug#end()
+" General VIM configs
+source $HOME/.dotfiles/nvim/general.vimrc
 
 " Highlight the current line
 " Only highlights the active window, and only when vim is in focus
@@ -42,22 +27,16 @@ augroup highlight_follows_vim
     autocmd FocusLost * set nocursorline
 augroup END
 
-augroup mapppings
-	autocmd!
-	autocmd FileType less,css,html nnoremap <Leader>s viB:sort<cr>
-augroup END
-
 augroup restorecursor
-	autocmd BufReadPost *
-				\ if line("'\"") > 1 && line("'\"") <= line("$") |
-				\   execute "normal! g`\"" |
-				\ endif
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
 augroup END
 
 augroup nerdtree
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
-
 
 " general settings
 set nobackup
@@ -135,9 +114,9 @@ let g:currentmode={
     \ 'r?' : 'CONFIRM ',
     \ '!'  : 'SHELL ',
     \ 't'  : 'TERMINAL '}
-" hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
-" hi SecondaryBlock ctermfg=07 ctermbg=11
-" hi Blanks ctermfg=8 ctermbg=00
+ hi PrimaryBlock ctermfg=00 ctermbg=02 cterm=bold
+ hi SecondaryBlock ctermfg=07 ctermbg=11
+ hi Blanks ctermfg=8 ctermbg=00
 
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
@@ -159,69 +138,25 @@ set statusline+=%#PrimaryBlock#
 set statusline+=\ %Y\ 
 
 function! GitBranch()
-	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
 
 function! StatuslineGit()
-	let l:branchname = GitBranch()
-	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
-
-
-" Functions
-" mappings
-let mapleader="\<Space>"
-
-" nnoremap
-nnoremap <Tab>      : NERDTreeToggle<cr>
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
-" vnoremap
-vnoremap > >gv
-vnoremap < <gv
-
-" onoremap
-onoremap ax a`
-onoremap ix i`
-
-" xnoremap
-xnoremap + g<C-a>
-xnoremap - g<C-x>
-
-" Quick jumping between splits
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-H> <C-W>h
-map <C-L> <C-W>l
-
-" Open new splits easily
-map vv <C-W>v
-map ss <C-W>s
-map Q  <C-W>q
 
 " Open splits on the right and below
 set splitbelow
 set splitright
 
-" no more mistakes
-:command! WQ wq
-:command! Wq wq
-:command! Wqa wqa
-:command! W w
-:command! Q q
-
-" abbreviations
-abclear
-iab #i #include
-iab #d #define
-cab dst put =strftime('%d %a, %b %Y')<cr>
-cab vg vimgrep
-
 " plugin settings
+let g:gitgutter_enabled = 1
+
 " nerdtree
 let g:NERDTreeMinimalUI           = 1
 let g:NERDTreeWinPos              = 'left'
-let g:NERDTreeWinSize             = 35
+let g:NERDTreeWinSize             = 45
 let g:NERDTreeStatusline          = "  "
 let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
