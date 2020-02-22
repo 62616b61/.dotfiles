@@ -1,2 +1,2 @@
-i3-msg "workspace 4;"
+i3-msg "workspace 0;"
 (chromium &)
