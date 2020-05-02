@@ -15,7 +15,7 @@ source $HOME/.dotfiles/nvim/general.vimrc
 
 " Highlight the current line
 " Only highlights the active window, and only when vim is in focus
-set cursorline
+"set cursorline
 augroup highlight_follows_focus
     autocmd!
     autocmd WinEnter * set cursorline
@@ -27,16 +27,17 @@ augroup highlight_follows_vim
     autocmd FocusLost * set nocursorline
 augroup END
 
-augroup restorecursor
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   execute "normal! g`\"" |
-    \ endif
-augroup END
+"augroup restorecursor
+  "autocmd BufReadPost *
+    "\ if line("'\"") > 1 && line("'\"") <= line("$") |
+    "\   execute "normal! g`\"" |
+    "\ endif
+"augroup END
 
-augroup nerdtree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-augroup END
+"augroup nerdtree
+  "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"augroup END
+
 
 " general settings
 set nobackup
@@ -73,7 +74,15 @@ set hidden
 set wildmenu
 set foldmethod=manual
 set complete=.,w,b,i,u,t,
+"set termguicolors
 set background=dark
+
+" always show signcolumns
+set signcolumn=yes
+
+set updatetime=100
+set clipboard=unnamedplus
+
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -152,14 +161,6 @@ set splitright
 
 " plugin settings
 let g:gitgutter_enabled = 1
-
-" nerdtree
-let g:NERDTreeMinimalUI           = 1
-let g:NERDTreeWinPos              = 'left'
-let g:NERDTreeWinSize             = 45
-let g:NERDTreeStatusline          = "  "
-let g:NERDTreeDirArrowExpandable  = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
 
 " comfortable motion
 let g:comfortable_motion_scroll_down_key = "j"
