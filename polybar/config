@@ -1,250 +1,371 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;; COLORS
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[colors]
-background = ${xrdb:color0}
-background-alt = ${xrdb:color0}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = ${xrdb:color2}
-secondary = ${xrdb:color2}
-alert = #bd2c40
+[color]
 
-[bar/example]
-monitor = ${env:MONITOR:}
+; Active Shade 
+shade0 = #07347a
+shade1 = #0D47A1
+shade2 = #1565C0
+shade3 = #1976D2
+shade4 = #1E88E5
+shade5 = #2196F3
+shade6 = #42A5F5
+shade7 = #64B5F6
+shade8 = #90CAF9
+
+;; Active Colors
+bground = #1D1F28
+fground = #f7f7f7
+;borderbg = #f7f7f7
+accent = #1E88E5
+modulefg = #f7f7f7
+modulefg-alt = #f7f7f7
+
+;; Other
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+;; Material Colors
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;; BAR
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[global/wm]
+
+;margin-bottom = 0
+;margin-top = 0
+
+[bar/main]
+
+monitor =
+monitor-fallback =
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+;width = 98%
+;height = 22
+;offset-x = 1%
+;offset-y = 2%
 width = 100%
-height = 25
-offset-y = 0
-fixed-center = false
+height = 24
+offset-x = 0%
+offset-y = 0%
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${color.bground}
+foreground = ${color.fground}
 
-line-size = 3
-line-color = #f00
+radius-top = 0.0
+radius-bottom = 0.0
 
-padding-left = 0
-padding-right = 4
+overline-size = 2
+overline-color = ${color.accent}
 
-module-margin-left = 2
-module-margin-right = 2
-font-0 = xos4 Terminus:pixelsize=10;1
-font-1 = FontAwesome5Free:style=Solid:size=10;2
-font-2 = FontAwesome5Free:style=Regular:size=10;2
-font-3 = FontAwesome5Brands:style=Regular:size=10;2
+;border-bottom-size = 2
+;border-color = ${color.borderbg}
 
-modules-left = i3 xkeyboard
-modules-center = xwindow
-modules-right = volume wlan battery date
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = xos4 Terminus:pixelsize=10;2
+font-1 = FontAwesome5Free:style=Solid:size=9;3
+font-2 = FontAwesome5Free:style=Regular:size=9;3
+font-3 = FontAwesome5Brands:style=Regular:size=9;3
+
+modules-left = workspaces title
+modules-center =
+modules-right = memory pulseaudio battery network date powermenu
+
+separator =
+spacing = 0
+dim-value = 1.0
+wm-name = 
+locale = 
 
 tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.shade0}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 5
+tray-scale = 1.0
 
-;wm-restack = bspwm
-;wm-restack = i3
+enable-ipc = true
 
-;override-redirect = true
+[settings]
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+screenchange-reload = false
 
-[module/xwindow]
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+pseudo-transparency = false
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;; MODULES
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/launcher]
+type = custom/text
+content = 
+
+content-background = ${color.shade1}
+content-foreground = ${color.modulefg}
+content-padding = 2
+
+click-left = rofi -show run -fullscreen True -lines 5 -line-margin 5 -padding 300 -bw 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/title]
 type = internal/xwindow
-label = %title:0:30:...%
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-blacklist-1 = caps lock
-label-layout =  %layout%
+format = <label>
+format-background = ${color.shade1}
+format-foreground = ${color.modulefg}
+format-padding = 2
 
-[module/i3]
+label = %title%
+label-maxlen = 60
+
+label-empty = Arch Linux
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/workspaces]
 type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
 
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
+enable-click = true
+enable-scroll = true
 
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.secondary}
-
-; focused = Active workspace on focused monitor
+label-active = %name%
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.secondary}
+label-occupied = %name%
+label-urgent = %name%
+label-empty = %name%
+
+format = <label-state> <label-mode>
+
+label-mode = %mode%
+label-mode-padding = 5
+label-mode-background = ${color.red}
+
+label-focused-background = ${color.shade5}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${color.deep-orange}
 label-urgent-padding = 2
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-label = %percentage%%
+label-unfocused = %index%
+label-unfocused-background = ${color.shade2}
+label-unfocused-padding = 2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/memory]
 type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
 
-[module/bitcoin]
-type = custom/script
-exec = ~/Scripts/bitcoin.sh
+format =  <label>
+format-background = ${color.shade6}
+format-padding = 2
 
-format = <label>
-format-prefix = " "
+label = %gb_used%
 
-interval = 60
+interval = 3
 
-[module/wlan]
-type = internal/network
-interface = wlp3s0
-interval = 5.0
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-format-connected = <label-connected>
-format-connected-prefix = " "
-label-connected = %essid%: %signal%%
+[module/pulseaudio]
+type = internal/pulseaudio
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;label-disconnected = %ifname% disconnected
+format-volume = <label-volume>
+format-volume-background = ${color.shade5}
+format-volume-foreground = ${color.modulefg}
+format-volume-padding = 2
 
-[module/date]
-type = internal/date
+label-volume =  %percentage%%
 
-interval = 5
+format-muted-prefix = 
+label-muted = " Muted"
+format-muted-background = ${color.shade5}
+format-muted-foreground = ${color.modulefg}
+format-muted-padding = 2
 
-date = "%A - %b %d"
-time = %H:%M
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-label = %date% %time%
+[module/backlight]
+type = internal/xbacklight
 
-[module/volume]
-type = internal/volume
+card = intel_backlight
 
-format-volume = <bar-volume>
-label-volume-foreground = ${root.foreground}
+format = <ramp> <label>
+format-background = ${color.shade4}
+format-foreground = ${color.modulefg}
+format-padding = 1
 
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label = %percentage%%
 
-bar-volume-width = 20
-bar-volume-foreground-0 = #C93EC9
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 0
-bar-volume-fill = –
-bar-volume-fill-font = 0
-bar-volume-empty = –
-bar-volume-empty-font = 0
-bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/battery]
 type = internal/battery
+
 battery = BAT0
-adapter = AC0
-full-at = 98
+adapter = ACAD
+
+poll-interval = 1
 
 format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.shade4}
+format-charging-foreground = ${color.modulefg}
+format-charging-padding = 2
 
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.shade4}
+format-discharging-foreground = ${color.modulefg}
+format-discharging-padding = 2
 
-format-full-prefix = " "
+label-charging = %percentage%%
+label-discharging = %percentage%%
 
-ramp-capacity-0 = " "
-ramp-capacity-1 = " "
-ramp-capacity-2 = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-animation-charging-0 = " "
-animation-charging-1 = " "
-animation-charging-2 = " "
-animation-charging-3 = " "
-animation-charging-4 = " "
-animation-charging-framerate = 750
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 250
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
+[module/date]
+type = internal/date
+interval = 1.0
 
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
+date = %A %d.%m.%Y%
+time = %I:%M %p
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+format = <label>
+format-background = ${color.shade2}
+format-foreground = ${color.modulefg}
+format-padding = 2
+label =  %date% %time%
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/powermenu]
 type = custom/menu
 
-format-spacing = 1
+expand-right = true
 
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
+menu-0-0 = REBOOT
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = SHUTDOWN
 menu-0-1-exec = menu-open-2
+menu-0-2 = SLEEP
+menu-0-2-exec = menu-open-3
 
-menu-1-0 = cancel
+menu-1-0 = BACK
 menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1 = REBOOT
+menu-1-1-exec = systemctl reboot
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
+menu-2-0 = SHUTDOWN
+menu-2-0-exec = systemctl poweroff
+menu-2-1 = BACK
 menu-2-1-exec = menu-open-0
 
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
+menu-3-0 = SLEEP
+menu-3-0-exec = systemctl suspend
+menu-3-1 = BACK
+menu-3-1-exec = menu-open-0
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
+format-spacing = 2
+format-background = ${color.shade1}
+format-foreground = ${color.modulefg}
+format-padding = 2
 
-; vim:ft=dosini
+label-open = 
+label-close = 
+label-separator = |
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+
+interval = 1
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-background = ${color.shade3}
+format-connected-foreground = ${color.modulefg}
+format-connected-padding = 2
+
+format-disconnected = <label-disconnected>
+format-disconnected-background = ${color.shade3}
+format-disconnected-foreground = ${color.modulefg}
+format-disconnected-padding = 2
+
+label-connected =  %essid% %downspeed:9%  %upspeed:9% 
+label-disconnected =  Not Connected
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;	    __________  ______
+;;	   / ____/ __ \/ ____/
+;;	  / __/ / / / / /_    
+;;	 / /___/ /_/ / __/    
+;;	/_____/\____/_/       
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
