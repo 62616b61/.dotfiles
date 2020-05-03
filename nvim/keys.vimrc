@@ -1,7 +1,7 @@
 let mapleader="\<Space>"
 
 " Sidebar
-nnoremap <Tab> :NERDTreeToggle<cr>
+nnoremap <Tab> :NERDTreeToggle<CR>
 
 " WhichKey helper
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
@@ -28,8 +28,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f :FzfPreviewProjectFiles <CR>
+nmap <leader>b :FzfPreviewAllBuffers <CR>
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()

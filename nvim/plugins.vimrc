@@ -9,6 +9,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'yuki-ycino/fzf-preview.vim'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
