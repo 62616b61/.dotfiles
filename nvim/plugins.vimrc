@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'
-Plug 'moll/vim-bbye'
+"Plug 'moll/vim-bbye' //research more
 "Plug 'simeji/winresizer'
 Plug 'nerdypepper/agila.vim'
 
@@ -20,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'liuchengxu/vista.vim'
 
 "Plug 'ervandew/supertab'
 

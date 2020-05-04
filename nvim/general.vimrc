@@ -36,3 +36,9 @@ let g:NERDTreeWinSize             = 40
 let g:NERDTreeStatusline          = "  "
 let g:NERDTreeDirArrowExpandable  = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+" vista
+let g:vista_executive_for = {
+  \ 'js': 'vim_lsp',
+  \ }
+let g:vista_ignore_kinds = ['Variable']
