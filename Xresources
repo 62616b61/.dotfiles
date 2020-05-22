@@ -37,8 +37,6 @@
 *color14:      base0F
 *color15:      base07
 
-
-
 ! ------------------------------------------------------------------------------
 !  URxvt
 ! ------------------------------------------------------------------------------
@@ -69,17 +67,19 @@ URxvt.intensityStyles     : false
 
 rofi.color-enabled: true
 
-rofi.color-window:    base00 , base00 , base00 , base00 , base03
-rofi.color-normal:    base00 , base03 , base00 , base00 , base07
+rofi.color-window:    base01 , base01 , base01 , base01 , base03
+rofi.color-normal:    base01 , base03 , base01 , base0B , base01
 rofi.color-active:    base03 , base0E , base00 , base0B , base00
 rofi.color-urgent:    base00 , base03 , base00 , base00 , base03
 
 rofi.hide-scrollbar: true
 rofi.separator-style: none
-rofi.padding: 700
-rofi.lines: 3
+rofi.padding: 60
+rofi.line-padding: 10
+rofi.lines: 5
 rofi.bw: 0
-rofi.width: 100
+rofi.width: 20
+rofi.location: 0
 
 
 ! Some font rendering fixings
