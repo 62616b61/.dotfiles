@@ -118,9 +118,9 @@ bindsym $mod+r mode "RESIZE"
 exec setxkbmap -layout 'us,ru' && setxkbmap -option 'grp:rctrl_toggle'
 
 #audio controls
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl set +5
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
+bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 # Move focused workspace to monitor
 bindsym $mod+Shift+bracketleft move workspace to output left
