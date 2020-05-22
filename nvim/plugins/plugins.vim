@@ -4,6 +4,7 @@ Plug 'mhinz/vim-startify'
 "Plug 'moll/vim-bbye' //research more
 "Plug 'simeji/winresizer'
 Plug 'nerdypepper/agila.vim'
+Plug 'danishprakash/vim-githubinator'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
