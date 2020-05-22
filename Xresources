@@ -43,7 +43,7 @@
 !  URxvt
 ! ------------------------------------------------------------------------------
 URxvt.cursorBlink : 0
-URxvt.font: xft:xos4 Terminus:size=5, \
+URxvt.font: xft:xos4 Terminus:size=8, \
             xft:Symbola:style=Regular, \
             xft:FreeSerif:style=Regular, \
             xft:Unifont:style=Sans-Serif:antialias=false
@@ -83,10 +83,9 @@ rofi.width: 100
 
 
 ! Some font rendering fixings
-Xft.dpi:        157
-Xft.rgba:       rgb
-Xft.autohint:   0
-Xft.antialias:  true
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
-Xft.lcdfilter:  lcddefault
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
