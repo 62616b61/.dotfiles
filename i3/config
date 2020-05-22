@@ -138,7 +138,7 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 font pango:dejavu 10
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 for_window [title="Android Emulator - pixel_9.0:5554"] floating enable
 for_window [title="Emulator"] floating enable
 
@@ -151,5 +151,5 @@ smart_borders on
 exec ~/.config/i3/workspaces/restore.sh
 
 exec_always xrdb ~/.Xresources
-exec_always feh --bg-fill ~/Pictures/Wallpapers/ofufakku.png
+exec_always feh --bg-fill ~/Pictures/Wallpapers/swirls.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

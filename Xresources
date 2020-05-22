@@ -43,7 +43,10 @@
 !  URxvt
 ! ------------------------------------------------------------------------------
 URxvt.cursorBlink : 0
-URxvt.font: xft:xos4 Terminus:size=8
+URxvt.font: xft:xos4 Terminus:size=5, \
+            xft:Symbola:style=Regular, \
+            xft:FreeSerif:style=Regular, \
+            xft:Unifont:style=Sans-Serif:antialias=false
 
 URxvt.perl-ext-common: default,font-size,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
@@ -80,7 +83,7 @@ rofi.width: 100
 
 
 ! Some font rendering fixings
-Xft.dpi:        96
+Xft.dpi:        157
 Xft.rgba:       rgb
 Xft.autohint:   0
 Xft.antialias:  true
