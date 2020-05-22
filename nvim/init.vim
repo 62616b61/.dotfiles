@@ -5,7 +5,7 @@ let &t_ZM = "\e[3m"
 source $HOME/.dotfiles/nvim/keys.vimrc
 
 " Install plugins
-source $HOME/.dotfiles/nvim/plugins.vimrc
+source $HOME/.dotfiles/nvim/plugins/plugins.vim
 
 " Language Server Protocol configs
 source $HOME/.dotfiles/nvim/lsp.vimrc
