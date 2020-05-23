@@ -18,14 +18,30 @@ set conceallevel=0                      " So that I can see `` in markdown files
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set laststatus=0                        " Always display the status line
+set laststatus=2                        " Always display the status line (edited)
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set signcolumn=yes                      " Always show signcolumns
+set sidescroll=20                       " Incremental horizontal scroll to reveal more text as needed
+set inccommand=split                    " Shows results while doing search and replace
+set backspace=indent,eol,start          " Make backspace work like most other programs
+set foldmethod=manual                   " Folds must be defined by entering commands (zf)
+
+set ignorecase                          " Searching is not case sensitive
+set smartcase                           " If a pattern contains an uppercase letter, it is case sensitive, otherwise, it is not
+set incsearch                           " Show the next match while entering a search
+set hlsearch                            " Highlighting search matches
+
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
+set noswapfile                          " Get rid of swapfiles everywhere
+set undofile                            " Enable persistent undo file
+set dir=/tmp                            " Change swap directory
+set undodir=~/.vim/undo                 " Change undo directory
+
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
@@ -37,7 +53,16 @@ set expandtab                           " Converts tabs to spaces
 set tabstop=2                           " Insert 2 spaces for a tab
 set softtabstop=2                       " Backspace through spaces
 
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+set relativenumber
+set norelativenumber                    " Turn relative line numbers off
+set relativenumber!                     " Toggle relative line numbers
+
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
+
+au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 
 " You can't stop me
 cmap w!! w !sudo tee %

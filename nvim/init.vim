@@ -1,5 +1,5 @@
 mapclear
-let &t_ZM = "\e[3m"
+"let &t_ZM = "\e[3m"
 
 source $HOME/.dotfiles/nvim/plugins/plugins.vim
 source $HOME/.dotfiles/nvim/general/settings.vim
@@ -32,50 +32,15 @@ augroup END
 "augroup END
 
 
-" general settings
-set noswapfile " get rid of swapfiles everywhere
-set dir=/tmp
 
-set relativenumber
-set norelativenumber  " turn relative line numbers off
-set relativenumber!   " toggle relative line numbers
-
-set omnifunc=syntaxcomplete#Complete
-set completefunc=LanguageClient#complete
-set list
-
-filetype indent on
-"set laststatus=2
+set listchars
 set listchars=tab:│\ ,nbsp:␣,trail:·,extends:>,precedes:<
 set fillchars=vert:\│
-set ignorecase
-set smartcase
-set sidescroll=40
-set incsearch
-set hlsearch
-set undofile
-set undodir=~/tmp
+
 set path+=**
-set inccommand=split
-set backspace=indent,eol,start
-set wildmenu
-set foldmethod=manual
-set complete=.,w,b,i,u,t,
+"set wildmenu
+"set complete=.,w,b,i,u,t,
 "set termguicolors
-
-" always show signcolumns
-set signcolumn=yes
-
-set wildignore+=.git,.hg,.svn
-set wildignore+=*.aux,*.out,*.toc
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
-set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
-set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
-set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
-set wildignore+=*.eot,*.otf,*.ttf,*.woff
-set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
-set wildignore+=*.swp,.lock,.DS_Store,._*
 
 colorscheme agila
 
