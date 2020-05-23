@@ -1,17 +1,10 @@
 mapclear
 let &t_ZM = "\e[3m"
 
-" Key mappings
-source $HOME/.dotfiles/nvim/keys.vimrc
-
-" Install plugins
 source $HOME/.dotfiles/nvim/plugins/plugins.vim
-
-" Language Server Protocol configs
+source $HOME/.dotfiles/nvim/general/settings.vim
+source $HOME/.dotfiles/nvim/keys.vimrc
 source $HOME/.dotfiles/nvim/lsp.vimrc
-
-" General VIM configs
-source $HOME/.dotfiles/nvim/general.vimrc
 
 " Highlight the current line
 " Only highlights the active window, and only when vim is in focus
@@ -40,12 +33,8 @@ augroup END
 
 
 " general settings
-set nobackup
-set nowritebackup
 set noswapfile " get rid of swapfiles everywhere
 set dir=/tmp
-
-syntax on
 
 set relativenumber
 set norelativenumber  " turn relative line numbers off
@@ -54,10 +43,9 @@ set relativenumber!   " toggle relative line numbers
 set omnifunc=syntaxcomplete#Complete
 set completefunc=LanguageClient#complete
 set list
+
 filetype indent on
-set laststatus=2
-set nowrap
-set noshowmode
+"set laststatus=2
 set listchars=tab:│\ ,nbsp:␣,trail:·,extends:>,precedes:<
 set fillchars=vert:\│
 set ignorecase
@@ -70,19 +58,13 @@ set undodir=~/tmp
 set path+=**
 set inccommand=split
 set backspace=indent,eol,start
-set hidden
 set wildmenu
 set foldmethod=manual
 set complete=.,w,b,i,u,t,
 "set termguicolors
-set background=dark
 
 " always show signcolumns
 set signcolumn=yes
-
-set updatetime=100
-set clipboard=unnamedplus
-
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc
@@ -96,11 +78,6 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
 colorscheme agila
-
-set shiftwidth=2     " indent = 2 spaces
-set expandtab
-set tabstop=2        " tab = 2 spaces
-set softtabstop=2    " backspace through spaces
 
 " statusline
 let g:currentmode={
@@ -154,10 +131,6 @@ function! StatuslineGit()
   let l:branchname = GitBranch()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
-
-" Open splits on the right and below
-set splitbelow
-set splitright
 
 " plugin settings
 let g:gitgutter_enabled = 1
