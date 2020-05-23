@@ -3,9 +3,11 @@ mapclear
 
 source $HOME/.dotfiles/nvim/plugins/plugins.vim
 source $HOME/.dotfiles/nvim/general/settings.vim
-source $HOME/.dotfiles/nvim/keys.vimrc
+source $HOME/.dotfiles/nvim/keys/mappings.vim
 source $HOME/.dotfiles/nvim/lsp.vimrc
 
+
+source $HOME/.dotfiles/nvim/configs/nerdtree.vim
 " Highlight the current line
 " Only highlights the active window, and only when vim is in focus
 "set cursorline
