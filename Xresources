@@ -41,7 +41,7 @@
 !  URxvt
 ! ------------------------------------------------------------------------------
 URxvt.cursorBlink : 0
-URxvt.font: xft:xos4 Terminus:size=8, \
+URxvt.font: xft:Cozette:style=Medium:size=10, \
             xft:Symbola:style=Regular, \
             xft:FreeSerif:style=Regular, \
             xft:Unifont:style=Sans-Serif:antialias=false
