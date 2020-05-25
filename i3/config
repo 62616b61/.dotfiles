@@ -117,16 +117,20 @@ bindsym $mod+r mode "RESIZE"
 # Keyboard layouts
 exec setxkbmap -layout 'us,ru' && setxkbmap -option 'grp:rctrl_toggle'
 
-#audio controls
+# Audio controls
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl set +5
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 bindsym XF86AudioMute exec pulseaudio-ctl mute
+
+# Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Move focused workspace to monitor
 bindsym $mod+Shift+bracketleft move workspace to output left
 bindsym $mod+Shift+bracketright move workspace to output right
 
-#set colors from .Xresources
+# Set colors from .Xresources
 set_from_resource $fg .color6 #C93EC9
 set_from_resource $bg .color0 #1F2D3A
 
