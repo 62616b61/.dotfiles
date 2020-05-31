@@ -308,7 +308,7 @@ animation-charging-framerate = 250
 type = internal/date
 interval = 1.0
 
-date = %A %d.%m.%Y%
+date = %d.%m.%Y%
 time = %I:%M %p
 
 format = <label>
@@ -375,7 +375,7 @@ format-disconnected-background = ${color.shade3}
 format-disconnected-foreground = ${color.modulefg}
 format-disconnected-padding = 2
 
-label-connected =  %essid% %downspeed:9%  %upspeed:9% 
+label-connected =  %essid%
 label-disconnected =  Not Connected
 
 
