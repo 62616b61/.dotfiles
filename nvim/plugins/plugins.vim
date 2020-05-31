@@ -1,29 +1,31 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'mhinz/vim-startify'
-"Plug 'moll/vim-bbye' //research more
 "Plug 'simeji/winresizer'
 Plug 'nerdypepper/agila.vim'
-Plug 'danishprakash/vim-githubinator'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'yuki-ycino/fzf-preview.vim'
+
+" Git
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'kdheepak/lazygit.vim', { 'branch': 'nvim-v0.4.3' }
 
 "Plug 'wellle/context.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-obsession'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'airblade/vim-gitgutter'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'liuchengxu/vista.vim'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-
-"Plug 'ervandew/supertab'
 
 " Syntax
 Plug 'elzr/vim-json'

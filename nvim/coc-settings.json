@@ -1,4 +1,10 @@
 {
   "suggest.noselect": false,
-  "coc.preferences.colorSupport": true
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.hoverTarget": "float",
+
+  "diagnostic.errorSign": "✗",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
 }

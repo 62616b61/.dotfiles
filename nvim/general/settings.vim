@@ -1,4 +1,5 @@
 syntax enable                           " Enables syntax highlighing
+set path+=**
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -59,7 +60,24 @@ set relativenumber!                     " Toggle relative line numbers
 " and for plugins that are filetype specific.
 filetype indent plugin on
 
+colorscheme agila
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+" Highlight the current line
+" Only highlights the active window, and only when vim is in focus
+augroup highlight_follows_focus
+    autocmd!
+    autocmd WinEnter * set cursorline
+    autocmd WinLeave * set nocursorline
+augroup END
+augroup highlight_follows_vim
+    autocmd!
+    autocmd FocusGained * set cursorline
+    autocmd FocusLost * set nocursorline
+augroup END
+
+highlight EndOfBuffer ctermfg=black ctermbg=black
